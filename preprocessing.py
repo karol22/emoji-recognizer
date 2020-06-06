@@ -4,7 +4,7 @@ import numpy
 from os import listdir
 from os.path import isfile, join
 
-folder_original = 'original_dataset/'
+folder_original = 'normalized_dataset/'
 folders = ['angry', 'happy', 'poo', 'sad', 'surprised']
 
 new_folder = 'normalized_dataset_32x32/'
