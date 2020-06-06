@@ -7,7 +7,7 @@ from os.path import isfile, join
 folder_original = 'original_dataset/'
 folders = ['angry', 'happy', 'poo', 'sad', 'surprised']
 
-new_folder = 'normalized_dataset/'
+new_folder = 'normalized_dataset_32x32/'
 
 for fo in folders:
     print("Starting with folder " + fo)
