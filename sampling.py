@@ -5,7 +5,7 @@ import os
 import random
 
 folder_original = 'normalized_dataset_32x32/'
-folders = ['angry']
+folders = ['angry', 'happy', 'poo', 'sad', 'surprised']
 
 new_folder = 'normalized_dataset_32x32/'
 
@@ -16,10 +16,10 @@ for fo in folders:
     size = int(len(onlyfiles)* 0.2)
     test_files = random.sample(onlyfiles, size)
     for f in test_files:
-        bashCommand = "cp " + path + f + " ./data/test/ ; rm " + path + f + ";"
+        bashCommand = "mv " + path + f + " ./data/test/" + fo + " ;"
         os.system(bashCommand)
     onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
     print("here")
-    for f in test_files:
-        bashCommand = "cp " + path + f + " ./data/train/ ; rm " + path + f + ";"
+    for f in onlyfiles:
+        bashCommand = "mv " + path + f + " ./data/train/" + fo + " ;"
         os.system(bashCommand)
